@@ -70,9 +70,16 @@ Each section that describes a component should include more than just one senten
 
 ## Sources
 
+Sources that were utilized for this challenge mostly consisted of extensive internet research. I used Google mostly, YouTube, reaching out to course TA's and classmates/colleagues. Below I have listed some links for websites that helped me tremendously with structuring information.
+
+* https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial
+* https://cs.lmu.edu/~ray/notes/regex/
+* https://www.rexegg.com/regex-anchors.html
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+
 ## Submission Links
 
-* 
+* https://gist.github.com/jiujitsucarrot
 * https://github.com/jiujitsucarrot/regex-tutorial
 
 ## Grading Requirements

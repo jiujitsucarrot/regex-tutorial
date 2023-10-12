@@ -130,14 +130,14 @@ Let's go ahead and dive into each of these components one by one. This should me
 
 Thank you once again for stopping by to get some basic information on Regex, or Regular Expression listed in this basic tutorial. My name is Tanner Norris, I am currently a junior developer in the ASU Full Stack Web Development program. Always eager to get tips from those in the industry as well as network to grow as a developer. Below I have attached the URL to my GitHub account. Once again, happy coding!
 
-    * https://github.com/jiujitsucarrot
+* https://github.com/jiujitsucarrot
 
 ### Source Links
 
-    * https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial
+* https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial
 
-    * https://cs.lmu.edu/~ray/notes/regex/
+* https://cs.lmu.edu/~ray/notes/regex/
 
-    * https://www.rexegg.com/regex-anchors.html
+* https://www.rexegg.com/regex-anchors.html
 
-    * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
