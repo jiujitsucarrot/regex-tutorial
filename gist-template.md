@@ -1,10 +1,10 @@
-# The Basics to Regex (Regular Expression Tutorial)
+# The Basics to Regex (Regular Expressions: Matching a URL)
 
 Regex, or Regular Expressions, might sound like a complex and cryptic code language, but it's actually a powerful tool that helps you find and manipulate text patterns in a wide range of applications. Think of regex as a secret decoder for text, allowing you to search for specific words, phrases, or even patterns of characters within a sea of text. Whether you're a beginner or an experienced programmer, understanding regex can be incredibly useful. In this tutorial, we'll take a step-by-step journey into the world of regex, breaking down its core components and demystifying its seemingly mysterious symbols. By the end, you'll have the skills to wield regex with confidence and unlock a whole new level of text-processing.
 
 ## Summary
 
-In this tutorial we will take a look at some components of Regex, or Regular Expressions. Regex helps you find specific words or patterns in text. In this tutorial we will cover anchors, quantifiers, grouping constructs, bracket expressions, character classes, the OR operator, flags, and last but not least character escapes. This may seem a bit overwhelming, take a deep breath. We are only getting started on our coding journey. It'll all make sense soon. Thank you for stopping by, let's get started!
+In this tutorial we will take a further look at some components of Regex, or Regular Expressions. Regex helps you find specific words or patterns in text. In this tutorial we will cover a regex tutorial when matching a URL, anchors, quantifiers, grouping constructs, bracket expressions, character classes, the OR operator, flags, and last but not least character escapes. This may seem a bit overwhelming, take a deep breath. We are only getting started on our coding journey. It'll all make sense soon. Thank you for stopping by, let's get started!
 
 ## Table of Contents
 
@@ -16,6 +16,7 @@ In this tutorial we will take a look at some components of Regex, or Regular Exp
 - [The OR Operator](#the-or-operator)
 - [Flags](#flags)
 - [Character Escapes](#character-escapes)
+- [Matching a URL with Regex](#matching-a-url-with-regex)
 
 ## Regex Components
 
@@ -37,7 +38,7 @@ Quantifiers are like rules that tell your regex how much or how many of somethin
 
 Grouping allows you to apply regex operators to a set of characters. We'll explore the use of parentheses for creating groups and how they can be employed for complex pattern matching.
 
-The 'Matching a Username' regex is like a simple rule for accepting usernames. It's not too picky about what it allows. But when you're dealing with more complex stuff, like checking different parts of a text to make sure they meet different rules, that's when things get a bit tricky. To handle this complexity, you use something called 'grouping constructs.' It's like dividing the task into smaller pieces, so you can check each part separately to see if it meets its own specific requirement. (Note: Primary way to group a section of regex is by using parentheses. Each section within parentheses is known as a subexpression). 
+When it comes to regular expressions, grouping constructs are like magical parentheses `(` and `)`that help you organize and simplify your text-searching spells. They allow you to group together characters, words, or even complex patterns, so you can treat them as a single unit. Imagine you want to find names in a list with both first and last names. Grouping constructs enable you to capture each name part separately, making it easy to work with and extract that specific information from a overload of text you have.
 
 ### Bracket Expressions
 
@@ -68,7 +69,61 @@ Regex flags modify how your regex pattern is processed. We'll explain the signif
 
 Character escapes allow you to match characters with special meanings, such as `.`, `*`, or `+`, literally. We'll guide you through escaping these characters to match them in your regex patterns.
 
-Let's go ahead and dive into each of these components one by one. This should me regex more approachable and comprehensible. Below are some Basic examples listed of what you may see when it comes to Regex. Happy Coding!
+Now that we have covered some things you may see along the way. Let's go ahead and dive into each of these components one by one. This starter information should've made regex more approachable and comprehensible. 
+
+### Matching a URL with Regex
+
+In this tutorial so far we have covered a lot of what contributes to the creation and make up of regular expressions(regex). Let's jump in a bit further and take a detailed look at how we can go about matching a URL with regex. We're going to break it down step by step, the provided regex pattern we have to work with for matching a URL is:
+
+```
+^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$
+```
+
+Overwhelmed? So was I, the bark is louder than the bite. Let's go ahead and break this down. 
+
+* Regex Pattern Explanation
+
+    * `^` - This means the start of a line.
+
+    * `(https?:\/\/)?` - This part matches the "http://" or "https://" protocol at the beginning of a URL. The question mark means it's optional.
+
+    * `([\da-z\.-]+)` - This part matches the main part of the website address. It can have lowercase letters, numbers, dots, or hyphens. This is capturing the domain name part of the URL.
+
+    * `\.([a-z\.]{2,6})` - This part matches the ending part of the website, like ".com" or ".org." It has to be 2 to 6 letters or dots. This captures the top-llevel domain(TLD) part.
+
+    * `([\/\w \.-]*)*` - This part finds the part after the main website address. It can be a path or query. It can contain letters, numbers, slashes, spaces, dots, and hyphens.
+
+    * `\/?$` - This matches the optional trailing slash and ensures that the URL ends with an optional `/`.
+
+Now that we have broken down the symbol meanings in our regex pattern, lets take a look at how we would use this pattern.
+
+* Using the Regex Pattern
+
+    * Import a regex library if you're working in a programming language. For example, in Python, you can use the re library.
+
+    * Define your regex pattern as a string. In our case, it's the pattern we explained earlier:
+
+    ```
+    ^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$
+    ```
+
+    * Apply the regex pattern to your input text. If you're using a programming language, you can use a function like re.match or re.findall to find the URLs in your text.
+
+    * The matched URLs will be returned as a result, and you can then use them as needed in your application.
+
+Last but not least, suppose you have a text containing URLs..
+
+* Example
+
+```
+Here is a sample URL: https://www.jiujitsucarrot.com/
+And another one: http://subdomain.example.co.uk
+This is not a URL: just some text
+```
+
+You can use the regex pattern to find and extract URLs from this text. Just like that, we made it! You now know how to explain a regex pattern for matching a URL, as well as using the pattern. Well done! Regular expressions are a powerful tool for text pattern matching, and this tutorial should help you get started with matching URLs in your text.
+
+Below are some Basic examples listed of what you may see when it comes to Regex. Happy Coding!
 
 ```
     hello - contains {hello}
